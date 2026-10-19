@@ -6,8 +6,7 @@ public class JDBCDemo {
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/java_lab";
 String user = "javalab";
-String password = "LabPass123!";
-
+String password = System.getenv("DB_PASSWORD");
         try (Connection con =
                 DriverManager.getConnection(url, user, password)) {
 
